@@ -48,6 +48,29 @@ body {
   );
 }
 
+.testimonials::before,
+.testimonials::after {
+  position: absolute;
+  content: "";
+
+  width: 7px;
+  height: 100%;
+  background-color: black;
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  box-shadow: 11px 0px 20px 18px rgba(0, 0, 0, 0.6);
+}
+
+.testimonials::before {
+  top: 0;
+  left: 0;
+}
+
+.testimonials::after {
+  top: 0;
+  right: 0;
+}
+
 @media screen and (min-width: 1024px) {
   .feature::before {
     display: block;
