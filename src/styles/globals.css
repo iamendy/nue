@@ -71,6 +71,14 @@ body {
   right: 0;
 }
 
+.scale {
+  background: radial-gradient(
+    86.8056% 75% at 81.4% 103.5%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
 @media screen and (min-width: 1024px) {
   .feature::before {
     display: block;

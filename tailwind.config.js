@@ -14,7 +14,7 @@ module.exports = {
         "space-mono": ["var(--space-mono)"],
       },
       colors: {
-        red: "#ff254b",
+        red: "#fe0353",
         hero: "rgb(249, 73, 245)",
         gray: "rgb(138, 143, 152)",
         dark: "#928c97",
