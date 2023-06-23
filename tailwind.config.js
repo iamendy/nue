@@ -1,18 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        inter: ["var(--inter)"],
+        figtree: ["var(--figtree)"],
+        manrope: ["var(--manrope)"],
+        slackey: ["var(--slackey)"],
+      },
+      colors: {
+        red: "#ff254b",
+        hero: "rgb(249, 73, 245)",
+        gray: "rgb(138, 143, 152)",
+        dark: "#928c97",
+        base: "#0d0e12",
+        "gray-50": "rgba(227, 229, 232, 0.52)",
+        "gray-100": "hsl(240, 5%, 20%)",
+        "gray-200": "rgb(34, 34, 38)",
+        "gray-300": "rgb(19, 21, 26)",
+        "gray-400": "rgb(13, 14, 18)",
       },
     },
   },
   plugins: [],
-}
+};
