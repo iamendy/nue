@@ -11,7 +11,7 @@ module.exports = {
         inter: ["var(--inter)"],
         figtree: ["var(--figtree)"],
         manrope: ["var(--manrope)"],
-        slackey: ["var(--slackey)"],
+        "space-mono": ["var(--space-mono)"],
       },
       colors: {
         red: "#ff254b",

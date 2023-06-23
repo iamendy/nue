@@ -39,6 +39,15 @@ body {
   left: calc(100%);
 }
 
+.card {
+  color: #8a8f98;
+  background: radial-gradient(
+    80.6% 40.3% at 100% 36%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
 @media screen and (min-width: 1024px) {
   .feature::before {
     display: block;

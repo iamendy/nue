@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import Mesh from "@/components/Mesh";
-import Advance from "@/components/icons/advance";
+import Code from "@/components/Code";
 
 export default function Home() {
   return (
@@ -175,6 +175,57 @@ export default function Home() {
 
           <div className="mt-8 lg:flex-1 lg:order-1">
             <img src="/img/login.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 lg:py-20 lg:px-10">
+        <div className="mb-8">
+          <h3 className="font-manrope font-medium mb-6 text-[28px] leading-[120%] lg:text-[44px] lg:leading-[120%]">
+            Why Nue?
+          </h3>
+          <p className="font-inter text-features text-[18px] leading-[1.5em] pr-3 lg:w-[40%]">
+            Rest easy knowing that your sensitive information is shielded from
+            ever-evolving cyber threats.
+          </p>
+        </div>
+
+        <div className="space-y-8  lg:space-y-0 lg:flex lg:gap-x-8">
+          <div className="card relative overflow-hidden px-8 pt-8 rounded-lg">
+            <h4 className="font-manrope text-[20px] font-medium text-white mb-4">
+              Seamless integration
+            </h4>
+            <p className="text-[16px] leading-[1.8em] mb-4">
+              Nue product integrates smoothly with your existing infrastructure
+              and workflows, whether they're on-premises, cloud-based, or
+              hybrid.
+            </p>
+
+            <Code />
+          </div>
+          <div className="flex flex-col space-y-8">
+            <div className="card overflow-hidden px-8 py-8 rounded-lg">
+              <h4 className="font-manrope text-[20px] font-medium text-white mb-4">
+                Flexible features
+              </h4>
+              <p className="text-[16px] leading-[1.8em]">
+                We offer adaptable features to customize security protocols,
+                access controls, and permissions to fit your business processes.
+              </p>
+            </div>
+            <div className="card overflow-hidden px-8 py-8 rounded-lg">
+              <h4 className="font-manrope text-[20px] font-medium text-white mb-4 pr-3">
+                Consistent uptime you can rely on
+              </h4>
+              <p className="text-[16px] leading-[1.8em] mb-5">
+                Uninterrupted uptime is crucial for business. Our network
+                security product offers consistent reliability.
+              </p>
+              <div className="border border-white/10 w-fit bg-white/[0.05] rounded-[100px] py-3 px-4 text-sm flex items-center space-x-3">
+                <div className="bg-green-200 rounded-full h-[6px] w-[6px] animate-ping flex"></div>
+                <span className="text-white">All systems operational</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

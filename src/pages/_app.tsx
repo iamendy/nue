@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Figtree, Inter, Manrope, Slackey } from "next/font/google";
+import { Figtree, Inter, Manrope, Slackey, Space_Mono } from "next/font/google";
 
-const slackey = Slackey({
+const space_mono = Space_Mono({
   subsets: ["latin"],
-  variable: "--figtree",
+  variable: "--space-mono",
   weight: ["400"],
 });
 
@@ -29,7 +29,7 @@ const inter = Inter({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main
-      className={`${figtree.variable} ${manrope.variable} ${inter.variable} ${slackey.variable}`}
+      className={`${figtree.variable} ${manrope.variable} ${inter.variable} ${space_mono.variable}`}
     >
       <Component {...pageProps} />
     </main>
