@@ -19,6 +19,7 @@ module.exports = {
         gray: "rgb(138, 143, 152)",
         dark: "#928c97",
         base: "#0d0e12",
+        features: "#8a8f98",
         "gray-50": "rgba(227, 229, 232, 0.52)",
         "gray-100": "hsl(240, 5%, 20%)",
         "gray-200": "rgb(34, 34, 38)",

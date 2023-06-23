@@ -1,5 +1,7 @@
 import Layout from "@/components/Layout";
 import Mesh from "@/components/Mesh";
+import Advance from "@/components/icons/advance";
+
 export default function Home() {
   return (
     <Layout>
@@ -63,7 +65,119 @@ export default function Home() {
         <Mesh />
       </section>
 
-      <section></section>
+      <section className="py-16 px-4 lg:py-20 lg:px-10">
+        <div className="space-y-8 lg:space-y-0 lg:flex lg:gap-x-8 items-center">
+          <div className="feature relative flex space-x-4 border-b pb-8 border-b-features/40 lg:pb-0 lg:border-b-0 items-start">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              fill="red"
+              className="w-9 h-9 -mt-1"
+            >
+              <g>
+                <path d="M220.06,84a102.06,102.06,0,1,1-24.31-32.27l24-24a6,6,0,0,1,8.48,8.49l-96,96a6,6,0,1,1-8.48-8.49l29.39-29.4a42,42,0,1,0,16.78,31.24,6,6,0,1,1,12-.68A54,54,0,1,1,161.7,85.83l25.54-25.55a89.91,89.91,0,1,0,22,28.93A6,6,0,1,1,220.06,84Z"></path>
+              </g>
+            </svg>
+            <div className="flex-col space-y-2 ">
+              <h3 className="font-manrope text-lg">
+                Advance threat intelligence
+              </h3>
+              <p className="text-features">
+                Stay ahead of cyber threats with our powerful threat
+                intelligence.
+              </p>
+            </div>
+          </div>
+
+          <div className="feature relative flex space-x-4 border-b pb-8 border-b-features/40 lg:pb-0 lg:border-b-0 lg:pr-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              fill="red"
+              className="w-9 h-9 -mt-1"
+            >
+              <g>
+                <path d="M208,42H48A14,14,0,0,0,34,56v58.77c0,88.24,74.68,117.52,89.65,122.49a13.5,13.5,0,0,0,8.7,0c15-5,89.65-34.25,89.65-122.49V56A14,14,0,0,0,208,42Zm2,72.79c0,80-67.84,106.59-81.44,111.1a1.55,1.55,0,0,1-1.12,0C113.84,221.38,46,194.79,46,114.79V56a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2Zm-37.76-15a6,6,0,0,1,0,8.48l-56,56a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L112,151.51l51.76-51.75A6,6,0,0,1,172.24,99.76Z"></path>
+              </g>
+            </svg>
+
+            <div className="flex-col space-y-2 ">
+              <h3 className="font-manrope text-lg">Secure connectivity</h3>
+              <p className="text-features">
+                Secure your data and connections with our robust VPN solution.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex space-x-4 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              fill="red"
+              className="w-9 h-9 -mt-1"
+            >
+              <g>
+                <path d="M235.07,189.09,147.61,37.22h0a22.75,22.75,0,0,0-39.22,0L20.93,189.09a21.53,21.53,0,0,0,0,21.72A22.35,22.35,0,0,0,40.55,222h174.9a22.35,22.35,0,0,0,19.6-11.19A21.53,21.53,0,0,0,235.07,189.09ZM224.66,204.8a10.46,10.46,0,0,1-9.21,5.2H40.55a10.46,10.46,0,0,1-9.21-5.2,9.51,9.51,0,0,1,0-9.72L118.79,43.21a10.75,10.75,0,0,1,18.42,0l87.46,151.87A9.51,9.51,0,0,1,224.66,204.8ZM122,144V104a6,6,0,0,1,12,0v40a6,6,0,0,1-12,0Zm16,36a10,10,0,1,1-10-10A10,10,0,0,1,138,180Z"></path>
+              </g>
+            </svg>
+
+            <div className="flex-col space-y-2 ">
+              <h3 className="font-manrope text-lg">
+                Intrusion detection system
+              </h3>
+              <p className="text-features lg:pr-5">
+                Detect and prevent unauthorized access with our advanced IDS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 lg:py-20 lg:px-10">
+        <div className="lg:flex lg:items-center">
+          <div className="lg:flex-1">
+            <h3 className=" text-red text-[16px] mb-6">Threat detection</h3>
+
+            <h1 className="font-manrope font-medium text-[28px] leading-[130%] mb-4 pr-4 lg:text-[44px] lg:w-[80%]">
+              Enhanced threat detection and real-time monitoring
+            </h1>
+            <p className="text-features leading-[1.5em] text-lg lg:w-[85%] pr-3">
+              Our security network uses advanced technology for threat
+              detection. Real-time monitoring and smart alerts ensure safety and
+              security of your premises.
+            </p>
+          </div>
+
+          <div className="mt-8 lg:flex-1">
+            <img src="/img/threat.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 lg:py-20 lg:px-10">
+        <div className="lg:flex lg:items-center">
+          <div className="lg:flex-1 lg:order-2">
+            <div className=" lg:w-[80%] lg:ml-auto">
+              <h3 className=" text-red text-[16px] mb-6">Secure access</h3>
+
+              <h1 className="font-manrope font-medium text-[28px] leading-[130%] mb-4 pr-4 lg:text-[44px] ">
+                Proactive protection against unauthorized access
+              </h1>
+              <p className="text-features leading-[1.5em] text-lg pr-3 lg:pr-1">
+                Our system offers peace of mind and robust protection for your
+                premises. With proactive monitoring and swift response
+                mechanisms, unauthorized access attempts are swiftly detected
+                and mitigated.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 lg:flex-1 lg:order-1">
+            <img src="/img/login.svg" alt="" />
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }

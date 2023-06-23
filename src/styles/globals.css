@@ -27,3 +27,20 @@ body {
   right: 0;
   z-index: 0;
 }
+
+.feature::before {
+  display: none;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, black, white, black);
+  position: absolute;
+  top: 0;
+  left: calc(100%);
+}
+
+@media screen and (min-width: 1024px) {
+  .feature::before {
+    display: block;
+  }
+}

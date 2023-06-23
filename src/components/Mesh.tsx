@@ -22,13 +22,13 @@ const Mesh = () => {
               >
                 <stop
                   offset="0"
-                  stop-color='var(--token-88b568e1-e6f8-4980-bc8c-36e51a98442d, rgb(255, 255, 255)) /* {"name":"White"} */'
-                  stop-opacity="1"
+                  stopColor='var(--token-88b568e1-e6f8-4980-bc8c-36e51a98442d, rgb(255, 255, 255)) /* {"name":"White"} */'
+                  stopOpacity="1"
                 ></stop>
                 <stop
                   offset="1"
-                  stop-color="rgba(13, 14, 18, 0)"
-                  stop-opacity="0"
+                  stopColor="rgba(13, 14, 18, 0)"
+                  stopOpacity="0"
                 ></stop>
               </radialGradient>
             </defs>
