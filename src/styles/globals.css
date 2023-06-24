@@ -122,6 +122,13 @@ body {
   );
 }
 
+.subscribe {
+  background: radial-gradient(
+    50% 28.799999999999997% at 50% 0%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
 @media screen and (min-width: 1024px) {
   .feature::before {
     display: block;

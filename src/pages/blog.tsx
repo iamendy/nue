@@ -121,7 +121,7 @@ const Blog = () => {
             <input
               placeholder="Email address"
               type="text"
-              className="bg-[#303036]  placeholder:text-features focus:outline-red/20 px-1"
+              className="bg-[#303036]  placeholder:text-features focus-within:outline-none focus:outline-red/20 px-1"
             />
             <button className="bg-white rounded-md text-black p-2 ">
               Subscribe
