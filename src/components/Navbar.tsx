@@ -5,15 +5,15 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="flex justify-between px-4 py-5 lg:px-10">
-      <div className="flex space-x-2 items-center">
+      <Link href="/" className="flex space-x-2 items-center">
         <Logo />
         <span className="text-xl font-figtree">Neu</span>
-      </div>
+      </Link>
 
       <Menu />
 
       <div className="hidden lg:flex text-sm items-center font-inter justify-between space-x-8 text-dark ">
-        <Link href="#" className="hover:text-red">
+        <Link href="/pricing" className="hover:text-red">
           Pricing
         </Link>
         <Link href="#" className="hover:text-red">

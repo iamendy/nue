@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Figtree, Inter, Manrope, Slackey, Space_Mono } from "next/font/google";
+import { Figtree, Inter, Manrope, Space_Mono } from "next/font/google";
 
 const space_mono = Space_Mono({
   subsets: ["latin"],
