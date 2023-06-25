@@ -35,19 +35,19 @@ export default function Home() {
           <div>
             <span className="text-gray-50">Trusted by companies globally</span>
 
-            <div className="flex items-center lg:w-[90%] space-x-2 my-5">
+            <div className="flex items-center lg:w-[100%] space-x-2 my-5">
               <div className="flex-1">
                 <img
                   src="/img/coinfuse.svg"
                   alt=""
-                  className="w-full scale-[90%]"
+                  className="w-full scale-[80%]"
                 />
               </div>
               <div className="flex-1">
                 <img
                   src="/img/deepdive.svg"
                   alt=""
-                  className="w-full scale-[90%]"
+                  className="w-full scale-[80%]"
                 />
               </div>
 
@@ -55,7 +55,7 @@ export default function Home() {
                 <img
                   src="/img/quorum.svg"
                   alt=""
-                  className="w-full scale-[90%]"
+                  className="w-full scale-[80%]"
                 />
               </div>
             </div>

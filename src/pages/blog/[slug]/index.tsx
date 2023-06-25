@@ -1,8 +1,16 @@
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import Check from "@/components/icons/Check";
+import type {
+  InferGetStaticPropsType,
+  GetStaticProps,
+  GetStaticPaths,
+} from "next";
+import { BlogType } from "@/types/blog";
+import { blogs } from "@/constants/blogs";
+import Blogs from "@/components/Blogs";
 
-const Index = () => {
+const Index = ({ blog }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
       <section className="px-4 py-10 lg:pt-20 lg:pb-0 lg:px-10 ">
@@ -10,24 +18,23 @@ const Index = () => {
           <div className="mb-8 lg:mb-14  lg:w-[50%]">
             <h3 className="text-sm text-red leading-[1.5em] mb-4">Security</h3>
             <h1 className="font-manrope text-[25px] leading-[130%] mb-4 lg:mb-5 lg:text-[35px] lg:w-[80%]">
-              Protect Yourself: Why Network Security Should be Your Top Priority
+              {blog?.title}
             </h1>
             <p className="text-[16px] text-features leading-[1.5em] mb-4 lg:mb-5  lg:w-[80%]">
-              Understand the importance of protecting your personal information
-              and network security.
+              {blog?.header}
             </p>
 
             <div className="flex items-center space-x-4 mb-8 lg:mb-0">
               <div className="w-12 h-12 rounded-lg overflow-hidden">
                 <img
-                  src="/img/user1.webp"
-                  alt="Nicole Hamm"
+                  src={`${process.env.NEXT_PUBLIC_APP_URL}/${blog.author.dp}`}
+                  alt={blog.author.dp}
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="text-sm">
-                <p className="">Nicole Hamm</p>
-                <p className="text-features">May 26th, 2023</p>
+                <p className="">{blog.author.name}</p>
+                <p className="text-features">{blog.date}</p>
               </div>
             </div>
           </div>
@@ -36,8 +43,8 @@ const Index = () => {
             <div className="lg:h-[350px] w-full rounded-lg overflow-hidden ">
               <img
                 className="w-full h-full object-cover"
-                src="/img/blog4.webp"
-                alt="Protect Yourself: Why Network Security Should be Your Top Priority"
+                src={`${process.env.NEXT_PUBLIC_APP_URL}/${blog.coverImage}`}
+                alt={`${blog?.title}`}
               />
             </div>
           </div>
@@ -48,89 +55,29 @@ const Index = () => {
         <div className="lg:flex lg:justify-between lg:gap-x-16  pb-14 border-b border-b-features/20">
           <div className="lg:w-[60%]">
             <p className="text-[18px] leading-[1.5em] text-features pb-5">
-              In today's digital landscape, protecting your network from cyber
-              threats is more critical than ever. Cybercriminals are becoming
-              increasingly sophisticated, and organizations of all sizes must
-              implement robust security measures to safeguard their sensitive
-              data and maintain the integrity of their networks. In this blog
-              post, we will explore ten essential security measures that every
-              organization should implement to protect their network from
-              potential breaches and attacks. By following these best practices,
-              you can significantly enhance your network's security posture and
-              minimize the risk of unauthorized access or data compromise.
+              {blog.main}
             </p>
 
-            <h3 className="text-[18px] font-manrope font-medium leading-[130%] my-5">
-              1. Implement a Strong Firewall
-            </h3>
+            {blog?.paragraphs.map((pg, i) => (
+              <div key={i}>
+                <h3 className="text-[18px] font-manrope font-medium leading-[130%] my-5">
+                  {pg.header}
+                </h3>
 
-            <p className="text-[18px] leading-[1.5em] text-features pb-5">
-              A firewall acts as the first line of defense for your network,
-              monitoring incoming and outgoing traffic and blocking potentially
-              harmful connections. Configure your firewall with strict rules and
-              regularly update it to ensure maximum protection against
-              unauthorized access.
-            </p>
-
-            <h3 className="text-[18px] font-manrope font-medium leading-[130%] my-5">
-              2. Secure Network Perimeters with Intrusion Detection Systems
-              (IDS)
-            </h3>
-
-            <p className="text-[18px] leading-[1.5em] text-features pb-5">
-              Intrusion Detection Systems continuously monitor your network for
-              suspicious activities and potential breaches. They provide
-              real-time alerts and help identify any unauthorized access
-              attempts, enabling swift response and mitigation.
-            </p>
-
-            <h3 className="text-[18px] font-manrope font-medium leading-[130%] my-5">
-              3. Employ Robust Authentication and Access Controls
-            </h3>
-
-            <p className="text-[18px] leading-[1.5em] text-features pb-5">
-              Implementing strong authentication mechanisms, such as
-              multi-factor authentication (MFA), ensures that only authorized
-              users can access your network resources. Additionally, enforce
-              strict access controls, granting permissions based on the
-              principle of least privilege, reducing the risk of unauthorized
-              data exposure.
-            </p>
-
-            <h3 className="text-[18px] font-manrope font-medium leading-[130%] my-5">
-              4. Regularly Update and Patch Systems
-            </h3>
-            <p className="text-[18px] leading-[1.5em] text-features pb-5">
-              Keep your network's operating systems, software, and applications
-              up to date with the latest security patches. Regularly applying
-              patches helps address known vulnerabilities and strengthens your
-              network's resilience against potential exploits.
-            </p>
-
-            <h3 className="text-[18px] font-manrope font-medium leading-[130%] my-5">
-              5. Encrypt Network Traffic
-            </h3>
-            <p className="text-[18px] leading-[1.5em] text-features pb-5">
-              Encrypting network traffic adds an additional layer of security by
-              making it unreadable to unauthorized users. Use secure protocols,
-              such as Transport Layer Security (TLS), to encrypt sensitive data
-              in transit and protect it from interception.
-            </p>
-            <p className="text-[18px] leading-[1.5em] text-features pb-5">
-              Protecting your network is an ongoing process that requires a
-              proactive and multi-layered approach. By implementing these ten
-              essential security measures, you can significantly enhance your
-              network's resilience and reduce the risk of data breaches and
-              unauthorized access. Stay vigilant, keep your systems up to date,
-              and foster a culture of security awareness within your
-              organization. Remember, investing in network security is an
-              investment in the long-term success and reputation of your
-              business.{" "}
-              <Link href="#" className="text-white">
-                Check out our pricing page.
-              </Link>
-            </p>
+                <p className="text-[18px] leading-[1.5em] text-features pb-5">
+                  {pg.body.map((p, i) => (
+                    <p
+                      key={i}
+                      className="text-[18px] leading-[1.5em] text-features pb-5"
+                    >
+                      {p}
+                    </p>
+                  ))}
+                </p>
+              </div>
+            ))}
           </div>
+
           <div className="hidden lg:block lg:w-[40%]">
             <div className="subscribe p-6 rounded-xl w-[90%]">
               <h3 className="font-manrope font-medium text-[20px] mb-5">
@@ -160,49 +107,7 @@ const Index = () => {
           More on the blog
         </h1>
 
-        <div className="space-y-14 lg:space-y-0 lg:flex lg:gap-x-9">
-          <div className="flex lg:flex-1 flex-col space-y-4">
-            <div className="w-full h-[200px] rounded-md overflow-hidden">
-              <img src="/img/blog1.webp" alt="" />
-            </div>
-            <span className="text-sm text-red">Security</span>
-            <h3 className="font-manrope text-lg font-medium">
-              Protect Yourself: Why Network Security Should be Your Top Priority
-            </h3>
-            <p className="text-features">
-              Understand the importance of protecting your personal information
-              and network security.
-            </p>
-          </div>
-
-          <div className="flex flex-col space-y-4 lg:flex-1">
-            <div className="w-full h-[200px] rounded-md overflow-hidden">
-              <img src="/img/blog2.webp" alt="" />
-            </div>
-            <span className="text-sm text-red">Security</span>
-            <h3 className="font-manrope text-lg font-medium">
-              10 Essential Security Measures to Protect Your Network
-            </h3>
-            <p className="text-features">
-              Discover 10 crucial security measures every organization should
-              implement to safeguard their network.
-            </p>
-          </div>
-
-          <div className="flex flex-col space-y-4 lg:flex-1">
-            <div className="w-full h-[200px] rounded-md overflow-hidden">
-              <img src="/img/blog3.webp" alt="" />
-            </div>
-            <span className="text-sm text-red">Engineering</span>
-            <h3 className="font-manrope text-lg font-medium">
-              The Role of Engineering in Building Secure Networks
-            </h3>
-            <p className="text-features">
-              Learn how engineering builds strong network infrastructures,
-              emphasizing security.
-            </p>
-          </div>
-        </div>
+        <Blogs />
       </section>
 
       <section className="py-16 px-4 lg:py-20 lg:px-10">
@@ -235,5 +140,26 @@ const Index = () => {
       </section>
     </Layout>
   );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = blogs.map((blog) => ({
+    params: {
+      slug: blog.slug,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<{
+  blog: BlogType;
+}> = ({ params }) => {
+  const blog = blogs.filter((b: BlogType) => b.slug == params?.slug);
+
+  return { props: { blog: blog[0] } };
 };
 export default Index;
