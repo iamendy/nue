@@ -14,8 +14,8 @@ const Footer = () => {
         </p>
 
         <p className="text-features">
-          Brigthon towers, <br />
-          GMb 209, United Kingdom.
+          Arsenalo g. 5, <br /> 01143 Vilnius <br />
+          Luthania
         </p>
       </div>
 

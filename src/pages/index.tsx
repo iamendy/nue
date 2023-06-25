@@ -6,6 +6,8 @@ import Advance from "@/components/icons/advance";
 import Secure from "@/components/icons/Secure";
 import Intrusion from "@/components/icons/Intrusion";
 import Testimonial from "@/components/Testimonial";
+import Link from "next/link";
+import Blogs from "@/components/Blogs";
 
 export default function Home() {
   return (
@@ -22,9 +24,12 @@ export default function Home() {
           </p>
 
           <div className="my-9 lg:mb-11">
-            <button className="bg-white text-sm rounded-lg leading-none px-4 py-3 lg:px-6 lg:py-3 lg:text-lg  text-gray-400 hover:bg-red hover:text-white transition-colors">
+            <Link
+              href="/contact"
+              className="bg-white text-sm rounded-lg leading-none px-4 py-3 lg:px-6 lg:py-3 lg:text-lg  text-gray-400 hover:bg-red hover:text-white transition-colors"
+            >
               Book a demo
-            </button>
+            </Link>
           </div>
 
           <div>
@@ -215,7 +220,7 @@ export default function Home() {
             <h3 className="font-manrope font-medium mb-6 text-[28px] leading-[120%] lg:text-[44px] lg:leading-[120%]">
               Explore our blog
             </h3>
-            <p className="font-inter text-features text-[18px] leading-[1.5em] pr-3 lg:w-[40%]">
+            <p className="font-inter text-features text-[18px] leading-[1.5em] pr-3 lg:w-[60%]">
               Discover the emerging security challenges and advancements.
             </p>
           </div>
@@ -224,49 +229,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="space-y-14 lg:space-y-0 lg:flex lg:gap-x-9">
-          <div className="flex lg:flex-1 flex-col space-y-4">
-            <div className="w-full h-[200px] rounded-md overflow-hidden">
-              <img src="/img/blog1.webp" alt="" />
-            </div>
-            <span className="text-sm text-red">Security</span>
-            <h3 className="font-manrope text-lg font-medium">
-              Protect Yourself: Why Network Security Should be Your Top Priority
-            </h3>
-            <p className="text-features">
-              Understand the importance of protecting your personal information
-              and network security.
-            </p>
-          </div>
-
-          <div className="flex flex-col space-y-4 lg:flex-1">
-            <div className="w-full h-[200px] rounded-md overflow-hidden">
-              <img src="/img/blog2.webp" alt="" />
-            </div>
-            <span className="text-sm text-red">Security</span>
-            <h3 className="font-manrope text-lg font-medium">
-              10 Essential Security Measures to Protect Your Network
-            </h3>
-            <p className="text-features">
-              Discover 10 crucial security measures every organization should
-              implement to safeguard their network.
-            </p>
-          </div>
-
-          <div className="flex flex-col space-y-4 lg:flex-1">
-            <div className="w-full h-[200px] rounded-md overflow-hidden">
-              <img src="/img/blog3.webp" alt="" />
-            </div>
-            <span className="text-sm text-red">Engineering</span>
-            <h3 className="font-manrope text-lg font-medium">
-              The Role of Engineering in Building Secure Networks
-            </h3>
-            <p className="text-features">
-              Learn how engineering builds strong network infrastructures,
-              emphasizing security.
-            </p>
-          </div>
-        </div>
+        <Blogs />
       </section>
 
       <section className="py-16 px-4 lg:py-20 lg:px-10">
