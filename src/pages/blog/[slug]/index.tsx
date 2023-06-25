@@ -13,7 +13,7 @@ import Blogs from "@/components/Blogs";
 const Index = ({ blog }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
-      <section className="px-4 py-10 lg:pt-20 lg:pb-0 lg:px-10 ">
+      <section className="px-4 py-10 lg:pt-20 lg:pb-0 lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto">
         <div className="lg:flex  pb-14 border-b border-b-features/20">
           <div className="mb-8 lg:mb-14  lg:w-[50%]">
             <h3 className="text-sm text-red leading-[1.5em] mb-4">Security</h3>
@@ -51,7 +51,7 @@ const Index = ({ blog }: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </section>
 
-      <section className="px-4 lg:pb-0 lg:pt-20 lg:px-10 ">
+      <section className="px-4 lg:pb-0 lg:pt-20 lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto">
         <div className="lg:flex lg:justify-between lg:gap-x-16  pb-14 border-b border-b-features/20">
           <div className="lg:w-[60%]">
             <p className="text-[18px] leading-[1.5em] text-features pb-5">
@@ -102,7 +102,7 @@ const Index = ({ blog }: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </section>
 
-      <section className="px-4 py-10 lg:pt-20 lg:pb-0 lg:px-10 ">
+      <section className="px-4 py-10 lg:pt-20 lg:pb-0 lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto">
         <h1 className="text-[20px] font-manrope font-medium leading-[130%] mb-9">
           More on the blog
         </h1>
@@ -110,7 +110,7 @@ const Index = ({ blog }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <Blogs />
       </section>
 
-      <section className="py-16 px-4 lg:py-20 lg:px-10">
+      <section className="py-16 px-4 lg:py-20 lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto">
         <div className="scale px-6 py-8 rounded-[10px] space-y-8 lg:flex lg:items-center justify-between lg:p-10">
           <div className="">
             <h3 className="font-manrope mb-3 text-[25px] font-medium leading-[130%] lg:text-[35px] lg:mb-4">

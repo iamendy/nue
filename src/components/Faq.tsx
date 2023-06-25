@@ -23,7 +23,7 @@ const faqs = [
 
 const Faq = () => {
   return (
-    <section className="py-16 px-4 lg:py-20 lg:px-10">
+    <section className="py-16 px-4 lg:py-20 lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto">
       <div className="mb-8">
         <h3 className="font-manrope font-medium mb-6 text-[28px] leading-[120%] lg:text-[44px] lg:leading-[120%]">
           Frequently asked questions

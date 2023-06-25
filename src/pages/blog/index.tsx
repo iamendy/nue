@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
 import Blogs from "@/components/Blogs";
-
+import Link from "next/link";
 const Blog = () => {
   return (
     <Layout>
-      <section className="px-4 py-10 lg:pt-20 lg:pb-0 lg:px-10 ">
+      <section className="px-4 py-10 lg:pt-20 lg:pb-0 lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto ">
         <div className="lg:flex lg:space-x-9 pb-14 border-b border-b-features/20">
           <div className="mb-8 lg:mb-14 lg:flex-1">
             <h3 className="text-sm text-red leading-[1.5em] mb-4">Security</h3>
@@ -19,7 +19,7 @@ const Blog = () => {
             <div className="flex items-center space-x-4 mb-8">
               <div className="w-12 h-12 rounded-lg overflow-hidden">
                 <img
-                  src="/img/user1.webp"
+                  src="/img/nicole-hamm.webp"
                   alt="Nicole Hamm"
                   className="object-cover w-full h-full"
                 />
@@ -31,23 +31,29 @@ const Blog = () => {
             </div>
 
             <div>
-              <button className="p-2 bg-white text-black rounded-lg transition-colors lg:py-3 lg:px-4 hover:bg-red hover:text-white">
+              <Link
+                href="blog/protect-yourself-why-network-security-should-be-your-top-priority"
+                className="p-2 inline-block bg-white text-black rounded-lg transition-colors lg:py-3 lg:px-4 hover:bg-red hover:text-white"
+              >
                 Read more
-              </button>
+              </Link>
             </div>
           </div>
 
-          <div className="w-full h-[200px] lg:h-max rounded-lg overflow-hidden lg:flex-1 items-stretch">
+          <Link
+            href="blog/protect-yourself-why-network-security-should-be-your-top-priority"
+            className="inline-block w-full h-[200px] lg:h-max rounded-lg overflow-hidden lg:flex-1 items-stretch"
+          >
             <img
               className="w-full h-full"
               src="/img/blog1.webp"
               alt="Protect Yourself: Why Network Security Should be Your Top Priority"
             />
-          </div>
+          </Link>
         </div>
       </section>
 
-      <section className="px-4 py-10 lg:py-20 lg:px-10 ">
+      <section className="px-4 py-10 lg:py-20 lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto">
         <h1 className="text-[20px] font-manrope font-medium leading-[130%] mb-9">
           Recent posts
         </h1>

@@ -4,7 +4,7 @@ import Faq from "@/components/Faq";
 const Contact = () => {
   return (
     <Layout>
-      <section className="px-4 py-10 lg:py-20  lg:px-10 ">
+      <section className="px-4 py-10 lg:py-20  lg:px-10 xl:px-0 xl:max-w-[1400px] xl:py-28 mx-auto ">
         <div>
           <h1 className="font-medium text-[35px] leading-[120%] mb-4 lg:text-[55px] lg:leading-[120%]">
             Contact us
@@ -69,6 +69,7 @@ const Contact = () => {
                 name="Message"
                 placeholder="Enter message"
                 className="w-full py-4 px-6 bg-[#222226] placeholder:text-features rounded-[8px] focus-within:outline-none focus:outline-red/20"
+                // @ts-ignore
                 rows="5"
               ></textarea>
             </div>

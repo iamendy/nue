@@ -1,13 +1,13 @@
 const Code = () => {
   return (
     <div className=" min-h-[270px] ">
-      <div className=" w-full absolute">
-        <div className="flex items-center h-9 bg-white/10 rounded-tl-lg pl-3 space-x-2">
+      <div className="w-full absolute lg:w-[70%]">
+        <div className="flex items-center h-9 bg-white/10 rounded-t-lg pl-3 space-x-2">
           <div className="w-2 h-2 bg-white/20 rounded-full"></div>
           <div className="w-2 h-2 bg-white/20 rounded-full"></div>
           <div className="w-2 h-2 bg-white/20 rounded-full"></div>
         </div>
-        <div className="border-l-white/10 border-l pl-4 pb-4 pt-4 text-sm flex font-space-mono space-x-4">
+        <div className="border-x-white/10 border-x pl-4 pb-4 pt-4 text-sm flex font-space-mono space-x-4">
           <div className="">
             <p>1</p>
             <p>2</p>

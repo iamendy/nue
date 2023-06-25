@@ -5,7 +5,7 @@ import Check from "@/components/icons/Check";
 const Plans = () => {
   return (
     <>
-      <div className="space-y-9 mb-9 lg:flex lg:space-y-0 lg:gap-x-9">
+      <div className="space-y-9 mb-9 lg:flex lg:space-y-0 lg:gap-x-9 ">
         <div className="plan p-8 rounded-xl">
           <div>
             <h3 className="font-manrope font-medium text-lg leading-[130%] mb-4 lg:text-[20px]">
@@ -15,7 +15,7 @@ const Plans = () => {
               Essential security measures for small businesses.
             </p>
             <div className="mb-4">
-              <h4 className="font-manrope text-[28px] font-medium leading-[130%]">
+              <h4 className="font-manrope text-[28px] font-medium leading-[130%] xl:text-[44px]">
                 $100
               </h4>
               <span className="text-features">per month</span>
@@ -75,7 +75,7 @@ const Plans = () => {
               Comprehensive solution for mid-sized companies.
             </p>
             <div className="mb-4">
-              <h4 className="font-manrope text-[28px] font-medium leading-[130%]">
+              <h4 className="font-manrope text-[28px] font-medium leading-[130%]  xl:text-[44px]">
                 $600
               </h4>
               <span className="text-features">per month</span>
@@ -135,7 +135,7 @@ const Plans = () => {
               Robust security suite for large-scale enterprises.
             </p>
             <div className="mb-4">
-              <h4 className="font-manrope text-[28px] font-medium leading-[130%]">
+              <h4 className="font-manrope text-[28px] font-medium leading-[130%]  xl:text-[44px]">
                 $2000
               </h4>
               <span className="text-features">per month</span>

@@ -1,11 +1,11 @@
 const Testimonial = () => {
   return (
     <section className="py-16 px-4 lg:py-20 lg:px-10">
-      <div className="mb-8 lg:mb-14">
+      <div className="mb-8 lg:mb-14 xl:px-0 xl:max-w-[1400px] mx-auto">
         <h3 className="font-manrope font-medium mb-6 text-[28px] leading-[120%] lg:text-[44px] lg:leading-[120%]">
           Don't take our word for it
         </h3>
-        <p className="font-inter text-features text-[18px] leading-[1.5em] pr-3 lg:w-[40%]">
+        <p className="font-inter text-features text-[18px] leading-[1.5em] pr-3 lg:w-[60%]">
           Hear what our customers are saying - discover why our security network
           product is trusted by organizations worldwide.
         </p>
@@ -41,6 +41,7 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
+
         <div className="bg-white/[0.05] rounded-3xl backdrop-blur  p-10">
           <div className="flex flex-col space-y-6">
             <div className="flex space-x-4 items-center ">
